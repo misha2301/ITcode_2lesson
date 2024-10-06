@@ -6,7 +6,7 @@ class Person:
         self.armor = armor
 
     def Attack(self, opponent):
-        print(f"{self.name} атакует, нанося {self.damage} единиц урона противнику.")
+        print(f"{self.name} атакует.")
         opponent.TakeDamage(self.damage)
 
     def TakeDamage(self, amount):
@@ -53,10 +53,8 @@ class Game:
             print(f"{self.player.name} победил!")
 
 
-# Создаем игрока и врага
 player = Player('Илья Муромец', 1000, 60, 35)
-enemy = Enemy('Соловей-разбойник', 100, 40, 0)
+enemy = Enemy('Соловей-разбойник', 100, 40, 5)
 
-# Запускаем игру
 game = Game(player, enemy)
 game.start()
